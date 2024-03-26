@@ -2,17 +2,16 @@
     "version": 2,
     "builds": [
         {
-            "src": "/api/index.php",
-            "use": "vercel-php@0.7.0"
+            "src": "api/index.php",
+            "use": "vercel-php@0.5.2"
         },
         {
-            "src": "/public/**",
-            "use": "vercel-php@0.7.0"
+            "src": "public/**",
+            "use": "vercel-php@0.5.2"
         }
     ],
     "routes": [
         {
-            
             "src": "/(.*)",
             "dest": "/api/index.php"
         }
@@ -25,8 +24,8 @@
         "APP_PACKAGES_CACHE": "/tmp/packages.php",
         "APP_ROUTES_CACHE": "/tmp/routes.php",
         "APP_SERVICES_CACHE": "/tmp/services.php",
+        "LIVEWIRE_MANIFEST_PATH": "/tmp/livewire-components.php",
         "CACHE_DRIVER": "array",
-        "CACHE_STORE": "array",
         "LOG_CHANNEL": "stderr",
         "SESSION_DRIVER": "cookie",
         "VIEW_COMPILED_PATH": "/tmp"
